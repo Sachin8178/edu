@@ -86,11 +86,17 @@ class WiSchoolFooterWidget extends StatelessWidget {
             children: [
               Icon(Icons.facebook, color: Colors.green),
               SizedBox(width: 8.0),
-              Icon(Icons.facebook, color: Colors.green),
+              ImageIcon(
+                  AssetImage(
+                    'assets/icons/Vector (3).png',
+                  ),
+                  color: Colors.green),
               SizedBox(width: 8.0),
-              Icon(Icons.facebook, color: Colors.green),
+              ImageIcon(AssetImage('assets/icons/Vector (4).png'),
+                  color: Colors.green),
               SizedBox(width: 8.0),
-              Icon(Icons.facebook, color: Colors.green),
+              ImageIcon(AssetImage('assets/icons/Vector (5).png'),
+                  color: Colors.green),
             ],
           ),
         ],
@@ -122,11 +128,17 @@ class WiSchoolFooterWidget extends StatelessWidget {
             children: [
               Icon(Icons.facebook, color: Colors.green),
               SizedBox(width: 8.0),
-              Icon(Icons.facebook, color: Colors.green),
+              ImageIcon(
+                  AssetImage(
+                    'assets/icons/Vector (3).png',
+                  ),
+                  color: Colors.green),
               SizedBox(width: 8.0),
-              Icon(Icons.facebook, color: Colors.green),
+              ImageIcon(AssetImage('assets/icons/Vector (4).png'),
+                  color: Colors.green),
               SizedBox(width: 8.0),
-              Icon(Icons.facebook, color: Colors.green),
+              ImageIcon(AssetImage('assets/icons/Vector (5).png'),
+                  color: Colors.green),
             ],
           ),
         ],

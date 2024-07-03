@@ -47,12 +47,15 @@ class AndroidPopularCoursesSection extends StatelessWidget {
                 label: const Text(
                   'See all',
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 12,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                icon: const Icon(Icons.arrow_downward_rounded),
+                icon: ImageIcon(
+                  AssetImage('assets/icons/ic_round-less-than.png'),
+                  color: Colors.white,
+                ),
               ),
             ],
           ),

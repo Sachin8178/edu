@@ -47,8 +47,8 @@ class PopularCoursesSection extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                icon: const Icon(
-                  Icons.arrow_downward_rounded,
+                icon: ImageIcon(
+                  AssetImage('assets/icons/ic_round-less-than.png'),
                   color: Colors.white,
                 ),
               ),

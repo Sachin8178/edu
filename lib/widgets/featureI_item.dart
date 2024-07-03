@@ -24,23 +24,23 @@ class ResponsiveFeatureItems extends StatelessWidget {
       children: [
         FeatureItem(
           title: 'Problem Solving',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/arcticons_math.png',
         ),
         FeatureItem(
           title: 'Live chat',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/akar-icons_chat-dots.png',
         ),
         FeatureItem(
           title: 'Group Reading',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/ci_group.png',
         ),
         FeatureItem(
           title: '10k Courses',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/bi_book.png',
         ),
         FeatureItem(
           title: 'Hand-on activities',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/cib_skillshare.png',
         ),
       ],
     );
@@ -54,30 +54,24 @@ class ResponsiveFeatureItems extends StatelessWidget {
       children: [
         FeatureItem(
           title: 'Problem Solving',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/arcticons_math.png',
         ),
         FeatureItem(
           title: 'Live chat',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/akar-icons_chat-dots.png',
         ),
         FeatureItem(
           title: 'Group Reading',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/ci_group.png',
         ),
         FeatureItem(
           title: '10k Courses',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/bi_book.png',
         ),
         FeatureItem(
           title: 'Hand-on activities',
-          iconPath: 'assets/images/Component 21.png',
+          iconPath: 'assets/icons/cib_skillshare.png',
         ),
-        // _buildFeatureItem('Problem Solving', 'assets/images/Component 21.png'),
-        // _buildFeatureItem('Live chat', 'assets/images/Component 21.png'),
-        // _buildFeatureItem('Group Reading', 'assets/images/Component 21.png'),
-        // _buildFeatureItem('10k Courses', 'assets/images/Component 21.png'),
-        // _buildFeatureItem(
-        //     'Hand-on activities', 'assets/images/Component 21.png'),
       ],
     );
   }

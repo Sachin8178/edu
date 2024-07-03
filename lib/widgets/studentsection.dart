@@ -83,31 +83,39 @@ class StudentSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        buildBulletPoint('Free E-book, Videos and kits', Icons.book, isMobile),
+        buildBulletPoint('Free E-book, Videos and kits',
+            'assets/icons/bi_book (1).png', isMobile),
         SizedBox(height: isMobile ? 10 : 30),
-        buildBulletPoint('Learn at your own pace', Icons.access_time, isMobile),
+        buildBulletPoint('Learn at your own pace',
+            'assets/icons/ant-design_field-time-outlined.png', isMobile),
         SizedBox(height: isMobile ? 10 : 30),
         buildBulletPoint('Collaborate with different learners around the globe',
-            Icons.people, isMobile),
+            'assets/icons/fe_shopping-bag.png', isMobile),
         SizedBox(height: isMobile ? 10 : 30),
-        buildBulletPoint(
-            'Top instructors around the globe', Icons.star, isMobile),
+        buildBulletPoint('Top instructors around the globe',
+            'assets/icons/ci_group (1).png', isMobile),
       ],
     );
   }
 
-  Widget buildBulletPoint(String text, IconData icon, bool isMobile) {
+  Widget buildBulletPoint(String text, String imagePath, bool isMobile) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.lightGreenAccent.shade100,
+              color: Color(0xFFDDFFFF),
               borderRadius: BorderRadius.circular(20),
             ),
             padding: EdgeInsets.all(isMobile ? 8 : 15),
-            child: Icon(icon, size: isMobile ? 20 : 30, color: Colors.teal),
+            child: Image.asset(
+              imagePath,
+              width: isMobile ? 20 : 30,
+              height: isMobile ? 20 : 30,
+              color: Colors
+                  .teal, // You can remove this if the image already has the desired color
+            ),
           ),
           const SizedBox(width: 15),
           Expanded(

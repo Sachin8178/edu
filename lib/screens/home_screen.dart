@@ -1,5 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors, unnecessary_const, unused_element, must_be_immutable
-
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:edu/model/courses.dart';
 import 'package:edu/widgets/AndroidPopularCoursesSection.dart';
 import 'package:edu/widgets/featureI_item.dart';
@@ -471,47 +471,117 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 16),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
+            const SizedBox(height: 0),
+            if (kIsWeb && !isSmallScreen) ...[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const SizedBox(width: 16),
-                  _buildCategoryCard(
-                    AppStrings.marketing,
-                    'assets/images/Component 21.png',
-                    categoryCardWidth,
-                    categoryCardHeight,
-                    cardFontSize,
+                  IconButton(
+                    icon: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.keyboard_arrow_left_outlined,
+                          color: Colors.green),
+                    ),
+                    onPressed: () {
+                      // Implement scroll to left functionality
+                    },
                   ),
-                  const SizedBox(width: 16),
-                  _buildCategoryCard(
-                    AppStrings.design,
-                    'assets/images/Component 21.png',
-                    categoryCardWidth,
-                    categoryCardHeight,
-                    cardFontSize,
+                  Expanded(
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 16),
+                          _buildCategoryCard(
+                            AppStrings.marketing,
+                            'assets/images/Component 21.png',
+                            categoryCardWidth,
+                            categoryCardHeight,
+                            cardFontSize,
+                          ),
+                          const SizedBox(width: 16),
+                          _buildCategoryCard(
+                            AppStrings.design,
+                            'assets/images/Component 21.png',
+                            categoryCardWidth,
+                            categoryCardHeight,
+                            cardFontSize,
+                          ),
+                          const SizedBox(width: 16),
+                          _buildCategoryCard(
+                            AppStrings.programming,
+                            'assets/images/Component 21.png',
+                            categoryCardWidth,
+                            categoryCardHeight,
+                            cardFontSize,
+                          ),
+                          const SizedBox(width: 16),
+                          _buildCategoryCard(
+                            AppStrings.technology,
+                            'assets/images/Component 21.png',
+                            categoryCardWidth,
+                            categoryCardHeight,
+                            cardFontSize,
+                          ),
+                          const SizedBox(width: 16),
+                        ],
+                      ),
+                    ),
                   ),
-                  const SizedBox(width: 16),
-                  _buildCategoryCard(
-                    AppStrings.programming,
-                    'assets/images/Component 21.png',
-                    categoryCardWidth,
-                    categoryCardHeight,
-                    cardFontSize,
+                  IconButton(
+                    icon: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.keyboard_arrow_right_outlined,
+                          color: Colors.green),
+                    ),
+                    onPressed: () {
+                      // Implement scroll to right functionality
+                    },
                   ),
-                  const SizedBox(width: 16),
-                  _buildCategoryCard(
-                    AppStrings.technology,
-                    'assets/images/Component 21.png',
-                    categoryCardWidth,
-                    categoryCardHeight,
-                    cardFontSize,
-                  ),
-                  const SizedBox(width: 16),
                 ],
               ),
-            ),
+            ] else ...[
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    const SizedBox(width: 16),
+                    _buildCategoryCard(
+                      AppStrings.marketing,
+                      'assets/images/Component 21.png',
+                      categoryCardWidth,
+                      categoryCardHeight,
+                      cardFontSize,
+                    ),
+                    const SizedBox(width: 16),
+                    _buildCategoryCard(
+                      AppStrings.design,
+                      'assets/images/Component 21.png',
+                      categoryCardWidth,
+                      categoryCardHeight,
+                      cardFontSize,
+                    ),
+                    const SizedBox(width: 16),
+                    _buildCategoryCard(
+                      AppStrings.programming,
+                      'assets/images/Component 21.png',
+                      categoryCardWidth,
+                      categoryCardHeight,
+                      cardFontSize,
+                    ),
+                    const SizedBox(width: 16),
+                    _buildCategoryCard(
+                      AppStrings.technology,
+                      'assets/images/Component 21.png',
+                      categoryCardWidth,
+                      categoryCardHeight,
+                      cardFontSize,
+                    ),
+                    const SizedBox(width: 16),
+                  ],
+                ),
+              ),
+            ],
             const SizedBox(height: 16),
           ],
         );
